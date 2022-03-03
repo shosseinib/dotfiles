@@ -10,4 +10,4 @@
 - alternative menu: [[https://github.com/DaveDavenport/rofi][rofi]]
   
 * emacs init files
-- Please consider the emacs init file is ```.emacs```which is bound with ```.config/emacs.org```. Since GitHub shows a rich format of the Org-mode files, open it as a raw file to reproduce its configurations.
+- Please consider the emacs init file is =.emacs= which is bound with =.config/emacs.org=. Since GitHub shows a rich format of the Org-mode files, open it as a raw file to reproduce its configurations.
