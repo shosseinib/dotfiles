@@ -408,6 +408,7 @@ mm-discouraged-alternatives '("text/html"))
 			       (org-bullets-mode 1))))
 #+end_src
 ** rtl in org-mode
+#+begin_src emacs-lisp
 (defun set-bidi-env ()
   "interactive"
   (setq bidi-paragraph-direction 'nil))
