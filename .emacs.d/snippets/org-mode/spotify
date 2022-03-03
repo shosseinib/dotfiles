@@ -1,4 +1,0 @@
-# key: sp
-# name: spotify
-# --
-- $1 *$2* [[$3][spotify]]

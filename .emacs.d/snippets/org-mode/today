@@ -1,4 +1,0 @@
-# key: td
-# name: today
-# --
-`(format-time-string "%a %d-%m-%Y")`

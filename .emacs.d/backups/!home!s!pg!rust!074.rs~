@@ -1,3 +1,0 @@
-fn say_it_loud(msg: &str) {
-    println!("{}!!!", msg.to_string().to_uppercase);
-}

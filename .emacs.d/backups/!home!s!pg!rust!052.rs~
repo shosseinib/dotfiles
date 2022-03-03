@@ -1,8 +1,0 @@
-enum Item {
-    Inventory(String),
-    None,
-}
-
-struct BagOfHolding {
-    Item: Item,
-}

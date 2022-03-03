@@ -1,1 +1,0 @@
-((nano-emacs :fetcher github :repo "rougier/nano-emacs") (nano-sidebar :fetcher github :repo "rougier/nano-sidebar") (quelpa :repo "quelpa/quelpa" :fetcher github))

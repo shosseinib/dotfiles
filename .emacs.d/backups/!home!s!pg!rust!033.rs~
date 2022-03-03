@@ -1,8 +1,0 @@
-#[allow(dead_code)]
-
-enum Species {
-    Cran,
-    Octopus,
-    Fish,
-    Clam,
-}

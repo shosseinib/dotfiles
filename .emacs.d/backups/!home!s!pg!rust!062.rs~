@@ -1,6 +1,0 @@
-fn main() {
-    let haiku: &'static str = "I writer, erase, rewrite,
-Earse again, and then
-a poppy blooms.
-- katsushika hokusai";
-}
