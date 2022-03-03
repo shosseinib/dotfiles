@@ -1,4 +1,4 @@
-.#+TITLE: my literate emacs config dotfile
+#+TITLE: my literate emacs config dotfile
 #+AUTHOR: 
 #+SETUPFILE: ~/org/setupfiles/comfy_inline.theme
 #+OPTIONS: toc:true
