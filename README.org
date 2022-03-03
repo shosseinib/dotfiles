@@ -6,7 +6,7 @@
 - terminal emulator: [[https://sw.kovidgoyal.net/kitty/][kitty]]
 - browser: brave browser
 - notification manager: [[https://dunst-project.org/][Dunst]]
-- alternative calendar:[[http://nongnu.org/jcal][jcal]]
+- alternative calendar: [[http://nongnu.org/jcal][jcal]]
 - alternative menu: [[https://github.com/DaveDavenport/rofi][rofi]]
   
 * emacs init files
