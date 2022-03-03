@@ -1,0 +1,16 @@
+* i3-gaps wm dotfiles
+[[./desktop.png]]
+- wm: [[https://github.com/Airblader/i3][i3-gaps]]
+- editor: [[https://www.gnu.org/software/emacs/][GNU emacs]]
+- bar: [[https://polybar.github.io/][polybar]]
+- terminal emulator: [[https://sw.kovidgoyal.net/kitty/][kitty]]
+- browser: brave browser
+- notification manager: [[https://dunst-project.org/][Dunst]]
+- alternative calendar: [[http://nongnu.org/jcal][jcal]]
+- alternative menu: [[https://github.com/DaveDavenport/rofi][rofi]]
+** Self-promotion for Persian folks
+#+begin_quote
+The Persian latex in the screenshot is my complete translation of Walt Withman's long poem, song of myself. I will be happy if I hear your feedback. You can find the full pdf version at [[https://echolalia.ir/song-of-myself/][echolalia]].
+#+end_quote
+* emacs init files
+- Please consider the emacs init file is =.emacs= which is bound with =.config/emacs.org=. Since GitHub shows a rich format of the Org-mode files, open it as a raw file to reproduce its configurations.
