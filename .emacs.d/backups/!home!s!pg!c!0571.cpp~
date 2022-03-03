@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main()
+{
+  int x {5};
+  int y {7};
+
+  if (!x > y) {
+    std::cout << x << " bozorgtar nist as " << y << "\n";
+  }
+  else {
+    std::cout << x << " bozorgtar ast as " << y << "\n";
+  }
+  return 0;
+}

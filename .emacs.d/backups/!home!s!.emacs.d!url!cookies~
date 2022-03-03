@@ -1,0 +1,22 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".google.cn"
+  [url-cookie "NID" "511=jH2_v-_wJ-VZTHMSkQpiDjlBvui2r8kHoWpGwqkmvmkdJP4FZBj0bj3y7QNXI5zPWUgp6h67goyyyhk_5_TkT0upzCh9I6FttgNqXJjRg8YQ57YQ9MHHqV-ciHMpDDMIw7uGWjNfDjOEoVEh2ZLB2oIgQQargIQynR91B2aat6s" "Sat, 30-Jul-2022 01:24:10 GMT" "/" ".google.cn" nil])
+ (".google.com"
+  [url-cookie "NID" "511=NgJKh2qtNzQHjLMGrY5EdHd02GVtZodG3XVNdU8DLUqV87YQrTA5zlyIN-J9EG1RvdTHnapMcye1-KsCdAg5suFZWgzitavAU_75CVKNGK_L30i8N2sAbj37_SRen6wSiS8sxW0AR_4IIEs9FJ3Psqj7dFoGCnmM3oZChYH6RAw" "Fri, 29-Jul-2022 02:58:28 GMT" "/" ".google.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '((".wikipedia.org"
+  [url-cookie "WMF-Last-Access-Global" "24-Jan-2022" "Fri, 25 Feb 2022 12:00:00 GMT" "/" ".wikipedia.org" t])
+ ("fa.wikipedia.org"
+  [url-cookie "WMF-Last-Access" "24-Jan-2022" "Fri, 25 Feb 2022 12:00:00 GMT" "/" "fa.wikipedia.org" t])
+ ("en.wikipedia.org"
+  [url-cookie "WMF-Last-Access" "24-Jan-2022" "Fri, 25 Feb 2022 12:00:00 GMT" "/" "en.wikipedia.org" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

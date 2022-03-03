@@ -1,0 +1,30 @@
+#!/bin/bash
+
+size="1920x1080"
+
+unsplashdir="$(xdg-user-dir)/.config/wallpapers/unsplash/"
+
+unsplash="https://source.unsplash.com/featured/$size/?"
+
+query="pastel+nature+animal"
+
+# Required Image Uri.
+reqImg="$unsplash$query"
+
+# Image title.
+title=$(date "+%Y%m%d-%H-%M-%S")
+# Logging.
+echo "Saving image to $unsplashdir$imgName"
+echo $unsplash$query "-> "$title"_"$size."jpeg"
+
+# Create Path Dir.
+mkdir -p $unsplashdir
+
+# Saving Image to collection.
+curl --compressed -Lsx socks5h://127.0.0.1:4070 -o $unsplashdir$title"_"$size.jpeg $unsplash$query
+
+#set wallpaper
+feh --bg-scale $unsplashdir$title"_"$size.jpeg
+
+echo "unsplash new wallpaper has been set for $XDG_CURRENT_DESKTOP 🦌 "
+notify-send -i preferences-desktop-wallpaper "unsplash new wallpaper has been set 🦌" $title"_"$size.jpeg

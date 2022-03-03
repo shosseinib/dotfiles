@@ -1,0 +1,6 @@
+((emoji--command-Choose\ Emoji nil)
+ (emoji--command-Emoji nil)
+ (emoji--command-Emoji\ >\ Smileys nil)
+ (emoji--command-Emoji\ >\ Smileys\ >\ concerned nil)
+ (emoji--command-Emoji\ >\ Smileys\ >\ smiling nil)
+ (emoji--command-Emoji\ >\ Smileys\ >\ tongue nil))

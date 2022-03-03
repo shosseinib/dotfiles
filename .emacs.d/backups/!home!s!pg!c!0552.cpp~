@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main()
+{
+  constexpr bool inBigClassroom {false};
+  if (inBigClassroom) {
+    constexpr int classSize {30};
+  }
+  else {
+    constexpr int classSize {20};    
+  }
+
+  std::cout << "the class size is: " << classSize << "\n";
+
+  return 0;
+}

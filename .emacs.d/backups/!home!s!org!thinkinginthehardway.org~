@@ -1,0 +1,55 @@
+#+title: My thoughts on the fundamental issues and the future
+#+SETUPFILE: ./setupfiles/comfy_inline.theme
+#+OPTIONS: num:2
+
+* What is the *meta-organism* of *culture*?
+* Language, *semiotics*, and defaults.
+* Culture can be adapted by delusions when power is provided to psychiatric patients.
+* Edward Wilson: from gene to culture:
+** The part about culture in the ants' colonies is excellent.
+
+* Why we should be spektical about ML and DL?
+** Garnelo, M., & Shanahan, M. (2019). *Reconciling deep learning with symbolic artificial intelligence: representing objects and relations*. Current Opinion in Behavioral Sciences, 29, 17–23. [[https://doi.org/10.1016/j.cobeha.2018.12.010][10.1016/j.cobeha.2018.12.010]]
+  * High dependency on existing data.
+  * Poor generalization
+  * Lack of interpretability: *=the black-box nature of most of the NNs=*
+  * shortcomings of DL align with the strengths of GOFAI
+  * lack of full expressive power of logic.
+** Ananthaswamy, A. (2020). *AI’s next big leap. Knowable Magazine* | Annual Reviews. [[https://doi.org/10.1146/knowable-101420-1][10.1146/knowable-101420-1]]
+  * We can use both knowledge base and logic nature of GOFAI.
+  * The hybrid needed only about 10 percent of the training data required by solutions based purely on deep neural networks.
+** Singh, R. (2021). *The Rise and Fall of Symbolic AI - Towards Data Science*. [[https://towardsdatascience.com/rise-and-fall-of-symbolic-ai-6b7abd2420f2][Medium]] 
+  * Grandfather of AI: *=Thomas Hobbes=*: Thinking is manipulation of symbols.
+  * René Descartes:
+    #+begin_quote
+I think tastes, odors, colors are no more than mere names so far as to an object as we locate them are concerned and that they reside in consciousness. Hence if the living creatures were removed, all these qualities would be wiped away and annihilate.
+    #+end_quote
+  * As Descartes says: mind is a non-physical 
+  * The problem of dualism: *=The article doesn't talk about the ontology of the dualism. But here I would consider it as a greate problem. The fun aspect of facts is that if we seek an alternative to the dualism, actually we are trying to walk in the dualism line.=*
+*** TODO * *=I should read at list=* =plato=: https://plato.stanford.edu/entries/dualism/
+  * Roger Penrose says:
+    #+begin_quote
+There is something(quantum mechanical) going in our brains that current day physics can’t explain.
+    #+end_quote
+    - This quote reminds me I should re-read his book. *=Shadows of the Mind=*.
+** TODO John McCarthy, *The Philosophy of AI and the AI of philosophy*. 2006. [[[file:books/aiphil2.pdf][pdf]]]
+* Write conde of conduct
+** TODO Add a placeholder at the beginning
+** TODO Write multiple blog post to argue multiple codes
+** *Symbolic Artificial Intelligence*. (2021, December 24). [[https://innovature.ai/symbolic-artificial-intelligence/amp][innovature.ai]]
+  * NNs are very powerful at certain types of learning, modeling, and action, but have *limited capability for abstraction*. 
+  * in GOFAI reasoning process can be easily understood. A symbolic AI can easily explain why a certain conclusion is reached and what the reasoning steps had been.
+  * NNs and ML is difficult to understand how the system concluded. It is very important when applied to critical applications such as self-driving cars, medical diagnosis, among others.
+** *What is symbolic artificial intelligence?* (2019, November 17). [[https://bdtechtalks.com/2019/11/18/what-is-symbolic-artificial-intelligence/amp][bdtechtalks]]
+#+begin_quote
+Called expert systems, these symbolic AI models use hardcoded knowledge and rules to tackle complicated tasks such as medical diagnosis. But they require a huge amount of effort by domain experts and software engineers and only work in very narrow use cases. As soon as you generalize the problem, there will be an explosion of new rules to add (remember the cat detection problem?), which will require more human labor. 
+#+end_quote
+Is the *=labor work=* and *=hardcoring=* a bad thing?
+*** TODO * Is AI research headed in the right direction? (2019, April 05). https://bdtechtalks.com/2019/03/25/richard-sutton-artificial-intelligence-research
+*** TODO Contributors to Wikimedia projects. (2021, October 07). Dartmouth workshop - Wikipedia. Retrieved from https://en.wikipedia.org/w/index.php?title=Dartmouth_workshop&oldid=1048672703
+*** TODO Demystifying AI – TechTalks. (2022, March 01). Retrieved from https://bdtechtalks.com/tag/demystifying-ai
+*** TODO The limits and challenges of deep learning. (2019, August 11). Retrieved from https://bdtechtalks.com/2018/02/27/limits-challenges-deep-learning-gary-marcus
+*** TODO Deep learning algorithms are opaque, and figuring out how they work perplexes even their creators. And it’s very hard to communicate and troubleshoot their inner-workings. https://bdtechtalks.com/2018/09/25/explainable-interpretable-ai
+*** TODO Many leading scientists believe that symbolic reasoning will continue to remain a very important component of artificial intelligence. https://bdtechtalks.com/2019/11/11/martin-ford-architects-of-intelligence-ai/
+*** TODO Some efforts to combine GOFAI and DL/Ml:
+    * "What happens when you combine neural networks and rule-based AI?" TechTalks, 14 Aug. 2019, https://bdtechtalks.com/2019/06/05/mit-ibm-hybrid-ai

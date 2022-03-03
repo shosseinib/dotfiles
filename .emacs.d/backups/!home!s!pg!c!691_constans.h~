@@ -1,0 +1,8 @@
+#ifndef CONSTANS_H
+#define CONSTANS_H
+
+namespace constants{
+  constexpr double pi {3.14159};
+  constexpr double abogadro {6.0221413e23};
+  constexpr double myGravity {9.2};
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=Bing Wallpaper of the Day as your Linux Desktops wallpaper
+Wants=network-online.target
+After=network.target
+
+[Service]
+Type=simple
+ExecStart="%h/bin/update-bing-wallpaper"
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=default.target

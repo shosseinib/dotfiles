@@ -1,0 +1,22 @@
+#include <iostream>
+
+const int g_x {};
+constexpr int g_w{};
+
+const int g_y {};
+constexpr int g_z {};
+
+void doSth(){
+  std::cout << g_y << "\n";
+  std::cout << g_z << "\n";
+}
+
+int main()
+{
+  doSth();
+
+  std::cout << g_y << "\n";
+  std::cout << g_z << "\n";
+
+  return 0;
+}

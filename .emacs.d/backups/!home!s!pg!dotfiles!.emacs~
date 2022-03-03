@@ -1,0 +1,75 @@
+;;; initconfig --- There is no Summary
+;;; Commentary:
+;;; Emacs --- shosseini Emacs init file
+(require 'package)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+;;; Code:
+(package-initialize)
+(org-babel-load-file "~/.config/emacs.org")
+;;; .emacs ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
+ '(company-show-quick-access t)
+ '(custom-safe-themes
+   '("3bcc8ae0805b91f9de1357a8c04ef9a13c25341ae689a873a881cf84a7c31620" "e641f8e93610b66eb8896d2a3386ba620defa8fbb7889b7145a6b6a31c997a5a" "09c52369747b296e91b1d9992f90c236954137d44ad7fa13a161960f11981863" "35dd8ddb74d4ca06ed2ff13782df73d343145e5b39f78d483e0f059c272ab56c" "43452774633eac94c4d8a7d7e2dd27c62905a72fcab760148fb937f295f820df" "27fe343f9e98cec49a5d15cb0f93906e6e17e9c43b7c617444a2175ed2d3bddf" "7154f2ce8f992043c1e64cb27e2d124b5b718aa5f1bb6d6ff8ea7697135266d5" "1d79415fbb429be93c7a864f4c1bc5d675fae9c0b3a2c2cdf2906cfac2f32dd8" "7924783312f3779a7f0f8e90a44cd69ab4a39a0c4d2e16333fd024f0a7bc7749" "603facaf5803063333482c3777ebba2e4a6da9541017cb5767a0559ee31f3765" "089b1987bb3e5e5d887d8a942455e04dd0e236874ed1c6d6dd896b90991fc293" "cfbedb345d96f3d6ae3b5b98e4c4d1ac43f9d7f7dc6c07b6889b31c8b95edded" "3b2c4e4178edcbcf9d9e5f9f89cc59ea67a17aae5de43e8d9083c96a5e2e928e" "c881418f0d78d4f37d0486280fd5855d63a9263eae7212b35f0fcdc2ef1adff6" "0c22a820df5fe012075dea8ea0506a76c2c8440089cd8d2ebd4ba78f04c59d55" "0fa004f41844be5cf938323b3c0e91a93e74034acc18eb4325bc68236ac27591" "479845b64b35a9de9609a6cac8ac78f7f8d316ff53a0ca107a92dcb98f80a339" "8feca8afd3492985094597385f6a36d1f62298d289827aaa0d8a62fe6889b33c" "1d78d6d05d98ad5b95205670fe6022d15dabf8d131fe087752cc55df03d88595" "4b62f25863fb026a14c1d7683dc83da4f0af07fe0cacd1b52f0e05639d483e83" "c2e1201bb538b68c0c1fdcf31771de3360263bd0e497d9ca8b7a32d5019f2fae" default))
+ '(dictionary-default-dictionary "wn")
+ '(dictionary-server "dict.org")
+ '(dired-listing-switches "-alXGHh --group-directories-first")
+ '(electric-pair-mode t)
+ '(global-visual-line-mode t)
+ '(highlight-indent-guides-method 'character)
+ '(mu4e-alert-group-by :maildir)
+ '(mu4e-alert-interesting-mail-query
+   "flag:unread AND NOT flag:trashed AND NOT maildir:\"/outlook/ECM\" AND NOT maildir:\"/outlook/ACT\" AND NOT maildir:\"/outlook/Goodreads\" AND NOT maildir:\"/outlook/Medium\"")
+ '(mu4e-alert-max-messages-to-process 2000)
+ '(mu4e-completing-read-function 'completing-read)
+ '(mu4e-context-policy nil)
+ '(mu4e-headers-date-format "%F %R")
+ '(mu4e-hide-index-messages t)
+ '(mu4e-index-cleanup nil)
+ '(mu4e-index-lazy-check t)
+ '(mu4e-use-fancy-chars t)
+ '(mu4e-view-show-addresses t)
+ '(mu4e-view-show-images t)
+ '(org-babel-load-languages
+   '((emacs-lisp . t)
+     (python . t)
+     (C . t)
+     (haskell . t)
+     (makefile . t)
+     (octave . t)
+     (latex . t)
+     (julia . t)
+     (lisp . t)))
+ '(org-hide-emphasis-markers t)
+ '(org-movies-api-key "fcb84daf")
+ '(org-startup-truncated nil)
+ '(org-static-blog-drafts-directory "~/pg/blog/drafts/")
+ '(org-static-blog-enable-tags t)
+ '(org-static-blog-posts-directory "~/pg/blog")
+ '(org-static-blog-publish-directory "~/pg/blog/")
+ '(org-static-blog-publish-title "shosseinib")
+ '(org-static-blog-publish-url "https://shosseinib.github.io")
+ '(package-selected-packages
+   '(org-modern parinfer-rust-mode ligature ox-rss org-static-blog flycheck-pos-tip helm-icons all-the-icons-ibuffer all-the-icons-dired helm-descbinds org-roam slime flatfluc-theme github-modern-theme pdf-tools undo-tree atomic-chrome mu4e-column-faces highlight-indent-guides flycheck-rust prettier rust-mode quelpa-use-package julia-mode with-proxy mmm-mode haskell-mode go-translate htmlize artbollocks-mode latex-preview-pane company-auctex auctex-latexmk helm-w3m w3m org-sidebar nano-emacs nano-sidebar mu4e-maildirs-extension mu4e-marker-icons all-the-icons-completion helm-mu mu4e-views mu4e-overview mu4e-alert neotree org-themis dumb-jump dockerfile-mode edit-indirect nix-mode toml-mode feature-mode yaml-mode graphql-mode json-mode csv-mode baidu-translate markdown-preview-mode markdown-preview-eww org-translate writefreely writegood-mode writeroom-mode markdown-toc org-bullets helm-wikipedia wiki-summary org-noter mlscroll visual-fill-column org-ebook ereader nov helm-c-yasnippet highlight-thing yasnippet-snippets pbcopy unicode-fonts doom-modeline parrot company-irony-c-headers company-irony company-box hlinum helm-xref avy-menu avy-flycheck use-package-hydra major-mode-hydra projectile yasnippet eglot which-key helm treemacs company-c-headers company-ctags company flycheck))
+ '(safe-local-variable-values '((hl-sexp-mode) (rainbow-mode . t)))
+ '(visual-fill-column-width 100)
+ '(w3m-default-display-inline-images t t)
+ '(writeroom-fullscreen-effect 'maximized)
+ '(x-stretch-cursor t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(error ((t (:foreground "#D87C83" :weight bold))))
+ '(flycheck-error ((t (:underline (:color "#D87c83" :style wave)))))
+ '(flycheck-info ((t (:underline (:color "#27A097" :style wave)))))
+ '(font-lock-function-name-face ((t (:foreground "#B97A95" :slant oblique))))
+ '(linum-highlight-face ((t (:inherit default :background "#1193A4" :foreground "#b9d5d4")))))

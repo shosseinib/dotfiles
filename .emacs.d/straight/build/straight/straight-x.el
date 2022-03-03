@@ -1,0 +1,1 @@
+/home/s/.emacs.d/straight/repos/straight.el/straight-x.el

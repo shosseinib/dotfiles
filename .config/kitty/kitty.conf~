@@ -1,0 +1,22 @@
+### background
+background_opacity 0.8
+dynamic_background_opacity yes
+
+### colors
+foreground #262626
+background #fcfcfc
+cursor #ff4949
+cursor_text_color #fcfcfc
+
+### text
+font_size 8
+font_family Source Code Pro v2
+
+### window
+window_padding_width 10
+
+### input feedback
+enable_audio_bell no
+cursor_blink_interval 0.45
+visual_bell_duration 0.01
+bell_on_tabl yes

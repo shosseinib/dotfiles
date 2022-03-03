@@ -1,0 +1,2 @@
+;;; Generated package description from mu4e-column-faces.el  -*- no-byte-compile: t -*-
+(define-package "mu4e-column-faces" "20210927.1759" "Faces for individual mu4e columns" '((emacs "25.3")) :commit "b76a5989cafe88a263688488854187a015beef41" :authors '(("Alexander Miller" . "alexanderm@web.de")) :maintainer '("Alexander Miller" . "alexanderm@web.de") :url "https://github.com/Alexander-Miller/mu4e-column-faces")

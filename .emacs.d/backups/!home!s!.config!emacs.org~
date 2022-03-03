@@ -1,0 +1,738 @@
+#+TITLE: my literate emacs config dotfile
+#+AUTHOR: shosseinib
+#+SETUPFILE: ~/org/setupfiles/comfy_inline.theme
+#+DATE: Thu 03-03-2022
+
+* clangd
+# #+begin_src emacs-lisp
+#   ;;(require 'eglot)
+#   ;;(add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+#   ;;(add-hook 'c-mode-hook 'eglot-ensure)
+#   ;;(add-hook 'c++-mode-hook 'eglot-ensure)
+#   ;; (add-hook 'c-mode-hook 'ls)
+#   ;; (add-hook 'c++-mode-hook 'lsp)
+#   (setq gc-cons-threshold (* 100 1024 1024)
+# 	read-process-output-max (* 1024 1024)
+# 	treemacs-space-between-root-nodes nil
+# 	company-idle-delay 0.0
+# 	company-minimum-prefix-length 1
+# 	company-show-numbers t)
+#   ;;       lsp-idle-delay 0.1)  ;; clangd is fast
+#   ;; ;; lsp
+#   ;; (use-package lsp-mode
+#   ;;   :init
+#   ;;   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+#   ;;   (setq lsp-keymap-prefix "C-c l")
+#   ;;   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+#   ;;          (prog-mode . lsp)
+#   ;;          ;; if you want which-key integration
+#   ;;          (lsp-mode . lsp-enable-which-key-integration))
+#   ;;   :commands lsp
+#   ;;   :ensure t)
+#   ;; ;; optionally
+#   ;; (use-package lsp-ui :commands lsp-ui-mode :ensure t)
+#   ;; ;; if you are helm user
+#   ;; (use-package helm-lsp :commands helm-lsp-workspace-symbol)
+#   ;; ;; if you are ivy user
+#   ;; (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+#   ;; (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+#   ;; ;; ccls
+#   ;; (use-package ccls
+#   ;;   :ensure t
+#   ;;   :config
+#   ;;   (setq ccls-executable "ccls")
+#   ;;   (setq lsp-prefer-flymake nil)
+#   ;;   (setq-default flycheck-disabled-checkers '(c/c++-clang c/c++-cppcheck c/c++-gcc))
+#   ;;   :hook ((c-mode c++-mode objc-mode) .
+#   ;;          (lambda () (require 'ccls) (lsp))))
+# #+end_src
+
+* clipbroad
+#+begin_src emacs-lisp
+(use-package pbcopy
+:ensure t)
+#+end_src
+
+* company
+#+begin_src emacs-lisp
+  (add-hook 'after-init-hook 'global-company-mode)
+  (add-hook 'c++-mode-hook 'company-c-headers)
+#+end_src  
+
+* Configure package mirrors
+#+begin_src emacs-lisp
+
+(add-to-list 'package-archives '("melpa" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/") t)
+ (setq package-archives
+       '(("melpa" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
+	 ("org"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
+	 ("gnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")))
+
+#+end_src
+
+* costum vartiables
+#+begin_src emacs-lisp
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
+ '(company-show-quick-access t)
+ '(custom-safe-themes
+   '("3bcc8ae0805b91f9de1357a8c04ef9a13c25341ae689a873a881cf84a7c31620" "e641f8e93610b66eb8896d2a3386ba620defa8fbb7889b7145a6b6a31c997a5a" "09c52369747b296e91b1d9992f90c236954137d44ad7fa13a161960f11981863" "35dd8ddb74d4ca06ed2ff13782df73d343145e5b39f78d483e0f059c272ab56c" "43452774633eac94c4d8a7d7e2dd27c62905a72fcab760148fb937f295f820df" "27fe343f9e98cec49a5d15cb0f93906e6e17e9c43b7c617444a2175ed2d3bddf" "7154f2ce8f992043c1e64cb27e2d124b5b718aa5f1bb6d6ff8ea7697135266d5" "1d79415fbb429be93c7a864f4c1bc5d675fae9c0b3a2c2cdf2906cfac2f32dd8" "7924783312f3779a7f0f8e90a44cd69ab4a39a0c4d2e16333fd024f0a7bc7749" "603facaf5803063333482c3777ebba2e4a6da9541017cb5767a0559ee31f3765" "089b1987bb3e5e5d887d8a942455e04dd0e236874ed1c6d6dd896b90991fc293" "cfbedb345d96f3d6ae3b5b98e4c4d1ac43f9d7f7dc6c07b6889b31c8b95edded" "3b2c4e4178edcbcf9d9e5f9f89cc59ea67a17aae5de43e8d9083c96a5e2e928e" "c881418f0d78d4f37d0486280fd5855d63a9263eae7212b35f0fcdc2ef1adff6" "0c22a820df5fe012075dea8ea0506a76c2c8440089cd8d2ebd4ba78f04c59d55" "0fa004f41844be5cf938323b3c0e91a93e74034acc18eb4325bc68236ac27591" "479845b64b35a9de9609a6cac8ac78f7f8d316ff53a0ca107a92dcb98f80a339" "8feca8afd3492985094597385f6a36d1f62298d289827aaa0d8a62fe6889b33c" "1d78d6d05d98ad5b95205670fe6022d15dabf8d131fe087752cc55df03d88595" "4b62f25863fb026a14c1d7683dc83da4f0af07fe0cacd1b52f0e05639d483e83" "c2e1201bb538b68c0c1fdcf31771de3360263bd0e497d9ca8b7a32d5019f2fae" default))
+ '(dictionary-default-dictionary "wn")
+ '(dictionary-server "dict.org")
+ '(dired-listing-switches "-alXGHh --group-directories-first")
+ '(electric-pair-mode t)
+ '(global-visual-line-mode t)
+ '(highlight-indent-guides-method 'character)
+ '(mu4e-alert-group-by :maildir)
+ '(mu4e-alert-interesting-mail-query
+   "flag:unread AND NOT flag:trashed AND NOT maildir:\"/outlook/ECM\" AND NOT maildir:\"/outlook/ACT\" AND NOT maildir:\"/outlook/Goodreads\" AND NOT maildir:\"/outlook/Medium\"")
+ '(mu4e-alert-max-messages-to-process 2000)
+ '(mu4e-completing-read-function 'completing-read)
+ '(mu4e-context-policy nil)
+ '(mu4e-headers-date-format "%F %R")
+ '(mu4e-hide-index-messages t)
+ '(mu4e-index-cleanup nil)
+ '(mu4e-index-lazy-check t)
+ '(mu4e-use-fancy-chars t)
+ '(mu4e-view-show-addresses t)
+ '(mu4e-view-show-images t)
+ '(org-babel-load-languages
+   '((emacs-lisp . t)
+     (python . t)
+     (C . t)
+     (haskell . t)
+     (makefile . t)
+     (octave . t)
+     (latex . t)
+     (julia . t)
+     (lisp . t)))
+ '(org-hide-emphasis-markers t)
+ '(org-movies-api-key "fcb84daf")
+ '(org-startup-truncated nil)
+ '(org-static-blog-drafts-directory "~/pg/blog/drafts/")
+ '(org-static-blog-enable-tags t)
+ '(org-static-blog-posts-directory "~/pg/blog")
+ '(org-static-blog-publish-directory "~/pg/blog/")
+ '(org-static-blog-publish-title "shosseinib")
+ '(org-static-blog-publish-url "https://shosseinib.github.io")
+ '(package-selected-packages
+   '(parinfer-rust-mode ligature ox-rss org-static-blog flycheck-pos-tip helm-icons all-the-icons-ibuffer all-the-icons-dired helm-descbinds org-roam slime flatfluc-theme github-modern-theme pdf-tools undo-tree atomic-chrome mu4e-column-faces highlight-indent-guides flycheck-rust prettier rust-mode quelpa-use-package julia-mode with-proxy mmm-mode haskell-mode go-translate htmlize artbollocks-mode latex-preview-pane company-auctex auctex-latexmk helm-w3m w3m org-sidebar nano-emacs nano-sidebar mu4e-maildirs-extension mu4e-marker-icons all-the-icons-completion helm-mu mu4e-views mu4e-overview mu4e-alert neotree org-themis dumb-jump dockerfile-mode edit-indirect nix-mode toml-mode feature-mode yaml-mode graphql-mode json-mode csv-mode baidu-translate markdown-preview-mode markdown-preview-eww org-translate writefreely writegood-mode writeroom-mode markdown-toc org-bullets helm-wikipedia wiki-summary org-noter mlscroll visual-fill-column org-ebook ereader nov helm-c-yasnippet highlight-thing yasnippet-snippets pbcopy unicode-fonts doom-modeline parrot company-irony-c-headers company-irony company-box hlinum helm-xref avy-menu avy-flycheck use-package-hydra major-mode-hydra projectile yasnippet eglot which-key helm treemacs company-c-headers company-ctags company flycheck))
+ '(safe-local-variable-values '((hl-sexp-mode) (rainbow-mode . t)))
+ '(visual-fill-column-width 100)
+ '(w3m-default-display-inline-images t t)
+ '(writeroom-fullscreen-effect 'maximized)
+ '(x-stretch-cursor t))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.)
+
+#+end_src
+* custom faces
+#+begin_src emacs-lisp
+  
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(error ((t (:foreground "#D87C83" :weight bold))))
+ '(flycheck-error ((t (:underline (:color "#D87c83" :style wave)))))
+ '(flycheck-info ((t (:underline (:color "#27A097" :style wave)))))
+ '(font-lock-function-name-face ((t (:foreground "#B97A95" :slant oblique))))
+ '(linum-highlight-face ((t (:inherit default :background "#1193A4" :foreground "#b9d5d4")))))
+
+;; Change backups directory to emacs folder
+;; this avoid to save backup files in the same directory of the original files
+(setq backup-directory-alist `(("." . ,(concat user-emacs-directory
+                                               "backups"))))
+#+end_src
+
+* dictionary
+** English-English
+#+begin_src emacs-lisp
+;; Key binding to invoke the dictionary client
+(global-set-key "\C-cs" 'dictionary-search)
+(global-set-key "\C-cm" 'dictionary-match-words)
+;; The dictionary server is running on the local machine
+;; Popup menu for GNU Emacs 21, and XEmacs 21
+(if (boundp 'running-xemacs)
+(global-set-key [(control button3)] 'dictionary-mouse-popup-matching-words)
+(global-set-key [mouse-3] 'dictionary-mouse-popup-matching-words))
+;; Tool-tip support for GNU Emacs 21
+(global-dictionary-tooltip-mode 1)
+(put 'dired-find-alternate-file 'disabled nil)
+#+end_src
+
+** translators - English-Persian
+#+begin_src emacs-lisp
+(require 'go-translate)
+(setq gts-translate-list '(("en" "fa")))
+(setq gts-default-translator
+ (gts-translator
+  :picker (gts-prompt-picker)
+  :engines (list (gts-google-engine) (gts-google-rpc-engine))
+  :render (gts-buffer-render)))
+#+end_src
+
+* edit text of chromium in emacs atomic-chrome(!)
+#+begin_src emacs-lisp
+(require 'atomic-chrome)
+(atomic-chrome-start-server)
+#+end_src
+
+* email client
+** main configs
+#+begin_src emacs-lisp
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
+(require 'mu4e)
+(setq mu4e-user-mail-address-list '("shahedhosseini92@gmail.com"
+			      "sajjadhusseini92@gmail.com"
+			      "sajjadhosseini@outlook.com"
+			      "shosseinib@ut.ac.ir"))
+(setq mu4e-contexts
+`( ,(make-mu4e-context
+:name "shahed"
+:match-func (lambda (msg) (when msg
+ (string-prefix-p "/shahed/INBOX" (mu4e-message-field msg :maildir))))
+:vars '(
+ (mu4e-trash-folder . "/shahed/[Gmail].Trash")
+ (mu4e-refile-folder . "/shahed/[Gmail].Archive")
+ ))
+,(make-mu4e-context
+:name "husseini92"
+:match-func (lambda (msg) (when msg
+ (string-prefix-p "/sajjadhusseini92/INBOX" (mu4e-message-field msg :maildir))))
+:vars '(
+ (mu4e-trash-folder . "/sajjadhusseini92/[Gmail].Trash")
+ (mu4e-refile-folder . "/sajjadhusseini92/[Gmail].Archive")
+ ))
+,(make-mu4e-context
+:name "outlook"
+:match-func (lambda (msg) (when msg
+ (string-prefix-p "/outlook/Inbox" (mu4e-message-field msg :maildir))))
+:vars '(
+ (mu4e-trash-folder . "/outlook/Deleted")
+ (mu4e-refile-folder . exchange-mu4e-refile-folder)
+ ))
+,(make-mu4e-context
+:name "ut"
+:match-func (lambda (msg) (when msg
+ (string-prefix-p "/ut/Inbox" (mu4e-message-field msg :maildir))))
+:vars '(
+ (mu4e-trash-folder . "/ut/Trash")
+;;       (mu4e-refile-folder . exchange-mu4e-refile-folder)
+ ))
+))
+(setq mu4e-maildir (expand-file-name "~/.mail"))
+
+(setq mu4e-get-mail-command "mbsync -Va"
+mu4e-update-interval 300)
+;; Enable images in w3m
+(setq w3m-default-display-inline-images t)
+(setq mu4e-html2text-command "w3m -dump -T text/html -o display_link_number=true -o auto_image=true -o display_image=true -o ignore_null_img_alt=false")
+(setq gnus-inhibit-images 'nil
+gnus-article-date-headers 'user-defined
+gnus-article-time-format "%R"
+gnus-header-face-alist '(("From" nil gnus-header-from)
+			 ("Subject" nil gnus-header-subject)
+			 ("Newsgroups:.*," nil gnus-header-newsgroups)
+			 ("To:" nil gnus-header-from)
+			 ("Flags:" nil font-lock-builtin-face)
+			 ("" gnus-header-name gnus-header-content))
+gnus-sorted-header-list '("^From:" "^Reply-To:" "^To:" "^Cc:" "^Subject"
+			  "^Date:" "^Flags:")
+mail-user-agent 'mu4e-user-agent
+message-cite-reply-position 'below
+message-citation-line-format "%a %d %b %Y à %R, %n a écrit :\n"
+message-citation-line-function 'message-insert-formatted-citation-line
+message-kill-buffer-on-exit t
+message-send-mail-function 'smtpmail-send-it
+mm-text-html-renderer 'w3m-standalone
+mm-discouraged-alternatives '("text/html"))
+#+end_src
+** mu4e keybinding
+#+begin_src emacs-lisp
+(global-set-key (kbd "C-<f6>") 'mu4e)
+#+end_src
+** mu4e notifications
+#+begin_src emacs-lisp
+(mu4e-alert-set-default-style 'libnotify)
+(add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
+(add-hook 'after-init-hook #'mu4e-alert-enable-mode-line-display)
+(setq mu4e-alert-email-notification-types '(count))
+;; mu4e view html method
+(define-key mu4e-headers-mode-map (kbd "v") #'mu4e-views-mu4e-select-view-msg-method)
+#+end_src
+
+* flycheck
+#+begin_src emacs-lisp
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+;; flycheck color modeline
+(use-package flycheck-color-mode-line
+  :hook (flycheck-mode . flycheck-color-mode-line-mode))
+;; flycheck-pos-tip
+(use-package flycheck-pos-tip
+  :hook (flycheck-mode . flycheck-pos-tip-mode))
+#+end_src
+
+* helm
+#+begin_src emacs-lisp
+(use-package helm
+:ensure t
+:custom
+(helm-M-x-use-completion-styles nil)
+(helm-split-window-inside-p t)
+:bind (:map helm-map
+	("<tab>" . 'helm-execute-persistent-action))
+:config
+(helm-mode 1))
+(require 'helm-xref)
+(define-key global-map [remap find-file] #'helm-find-files)
+(define-key global-map [remap execute-extended-command] #'helm-M-x)
+(define-key global-map [remap switch-to-buffer] #'helm-mini)
+#+end_src
+
+* highlight indent guides
+#+begin_src emacs-lisp
+(use-package highlight-indent-guides
+:ensure t
+:hook
+(prog-mode . highlight-indent-guides-mode))
+#+end_src
+
+* highlight thing
+#+begin_src emacs-lisp
+(highlight-thing-mode)
+#+end_src
+
+* hydra
+#+begin_src emacs-lisp
+(use-package major-mode-hydra
+:ensure t
+:bind
+("M-n" . major-mode-hydra))
+(major-mode-hydra-define emacs-lisp-mode nil
+("Eval"
+(("b" eval-buffer "buffer")
+("e" eval-defun "defun")
+("r" eval-region "region"))
+"REPL"
+(("I" ielm "ielm"))
+"Test"
+(("t" ert "prompt")
+("T" (ert t) "all")
+("F" (ert :failed) "failed"))
+"Doc"
+(("d" describe-foo-at-point "thing-at-pt")
+("f" describe-function "function")
+("v" describe-variable "variable")
+("i" info-lookup-symbol "info lookup"))))
+#+end_src
+
+* irony
+# #+begin_src emacs-lisp
+# ;; (use-package irony
+# ;;   :ensure t
+# ;;   :defer t
+# ;;   :init
+# ;;   (add-hook 'c++-mode-hook 'irony-mode)
+# ;;   (add-hook 'c-mode-hook 'irony-mode)
+# ;;   (add-hook 'objc-mode-hook 'irony-mode)
+# ;;   :config
+# ;;   ;; replace the `completion-at-point' and `complete-symbol' bindings in
+# ;;   ;; irony-mode's buffers by irony-mode's function
+# ;;   (defun my-irony-mode-hook ()
+# ;;     (define-key irony-mode-map [remap completion-at-point]
+# ;;       'irony-completion-at-point-async)
+# ;;     (define-key irony-mode-map [remap complete-symbol]
+# ;;       'irony-completion-at-point-async))
+# ;;   (add-hook 'irony-mode-hook 'my-irony-mode-hook)
+# ;;   (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+# ;;   )
+# #+end_src
+
+* modeline
+#+begin_src emacs-lisp
+(use-package doom-modeline
+:ensure t
+:defer t
+:custom
+(doom-modeline-modal-icon nil)
+:hook
+(after-init . doom-modeline-mode)
+)
+#+end_src
+
+* Navigate through buffers
+#+begin_src emacs-lisp
+(global-set-key (kbd "M-[") 'previous-buffer)
+(global-set-key (kbd "M-]") 'next-buffer)
+#+end_src
+
+* nov.el
+#+begin_src emacs-lisp
+(defun my-nov-font-setup ()
+(face-remap-add-relative 'variable-pitch :family "ETbb"
+				     :height 1.3))
+(add-hook 'nov-mode-hook 'my-nov-font-setup)
+(setq nov-text-width t)
+(setq visual-fill-column-center-text t)
+(add-hook 'nov-mode-hook 'visual-line-mode)
+(add-hook 'nov-mode-hook 'visual-fill-column-mode)
+#+end_src
+
+* novel mode
+#+begin_src emacs-lisp
+(add-hook 'novel-mode-post-start-hook
+	  (lambda ()
+	    (set-face-font 'default "ETbb")))
+(add-hook 'novel-mode-post-stop-hook
+	  (lambda ()
+	    (set-face-font 'default "Iosevka SS15 10")))
+#+end_src
+* org-mode, holy org mode
+** bullets in org mode
+#+begin_src emacs-lisp
+  (use-package org-bullets
+    :ensure t
+    :init
+    (add-hook 'org-mode-hook (lambda ()
+			       
+			       (org-bullets-mode 1))))
+#+end_src
+** rtl in org-mode
+(defun set-bidi-env ()
+  "interactive"
+  (setq bidi-paragraph-direction 'nil))
+(add-hook 'org-mode-hook 'set-bidi-env)
+#+end_src
+
+** org agenda
+#+begin_src emacs-lisp
+(setq org-agenda-files
+      (delq nil
+	    (mapcar (lambda (x) (and x (file-exists-p x) x))
+		    `("~/org/daily.org"
+		      "~/org/weekly.org"))))
+(setq org-agenda-dim-blocked-tasks nil)
+(add-to-list 'auto-mode-alist '("\\.txt$" . org-mode))
+#+end_src
+* parrot mode
+#+begin_src emacs-lisp
+(defun my/parrot-animate-when-compile-success (buffer result)
+(if (string-match "^finished" result)
+(parrot-start-animation)))
+(use-package parrot
+:ensure t
+:config
+(parrot-mode)
+(add-hook 'before-save-hook 'parrot-start-animation)
+(add-to-list 'compilation-finish-functions 'my/parrot-animate-when-compile-success))
+#+end_src
+
+* persian key binds
+#+begin_src emacs-lisp
+  (loop
+  ; for from across "йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖ\ЭЯЧСМИТЬБЮ№"
+  ; for to   across "qwertyuiop[]asdfghjkl;'zxcvbnm,.QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>#"
+  for from across "ضصثقفغعهخحجچشسیبلاتنمکگظطزرذدپو./۱۲۳۴۵۶۷۸۹۰-="
+  for to   across "qwertyuiop[]asdfghjkl;'zxcvbnm,./1234567890-="
+  do
+  (eval `(define-key key-translation-map (kbd ,(concat "C-" (string from))) (kbd ,(concat     "C-" (string to)))))
+  (eval `(define-key key-translation-map (kbd ,(concat "M-" (string from))) (kbd ,(concat     "M-" (string to))))))
+#+end_src
+
+* rust
+#+begin_src emacs-lisp
+(use-package rust-mode
+:defer t
+:ensure t
+:init
+(add-hook 'rust-mode-hook
+	(lambda () (setq indent-tabs-mode nil)))
+(setq rust-format-on-save t)
+(add-hook 'rust-mode-hook
+    (lambda () (prettify-symbols-mode)))
+(add-hook 'rust-mode-hook #'lsp)
+:bind (("M-," . rust-compile))
+)
+(use-package flycheck-rust
+:ensure t
+:hook (flycheck-mode-hook . flycheck-rust-setup))
+#+end_src
+
+* scratch buffer
+#+begin_src emacs-lisp
+(defun my/scratch-buffer()
+"Switch to scratch buffer."
+(interactive)
+(let ((buffer (get-buffer "*scratch*")))
+(if buffer
+  (switch-to-buffer buffer)
+(switch-to-buffer (get-buffer-create "*scratch*"))
+(insert initial-scratch-message))
+(lisp-interaction-mode)))
+#+end_src
+
+* some cl
+#+begin_src emacs-lisp
+  (when (cl-find-if-not #'package-installed-p package-selected-packages)
+    (package-refresh-contents)
+    (mapc #'package-install package-selected-packages))
+  (setq inferior-lisp-prompt "sbcl")
+#+end_src
+
+* telegram
+# #+begin_src emacs-lisp
+# (setq telega-proxies
+# (list
+#  '(:server "xxx" :port xxx :enable :false
+# 	   :type (:@type "proxyTypeSocks5"))
+#  '(:server "93.95.228.158" :port 443 :enable t
+# 	   :type (:@type "proxyTypeMtproto"
+# 			 :secret ""))
+#  ))
+# #+end_src
+
+* UI
+** all-the-icons
+*** main config
+#+begin_src emacs-lisp
+(use-package all-the-icons
+  :if (display-graphic-p)
+  :config
+  (setq all-the-icons-scale-factor 1)
+  (setq all-the-icons-color-icons t))
+#+end_src
+*** all-the-icons-dired
+#+begin_src emacs-lisp
+(use-package all-the-icons-dired
+  :hook (dired-mode . all-the-icons-dired-mode)
+  :config
+  (setq all-the-icons-dired-monochrome nil))
+#+end_src
+*** all-the-iconcs-ibuffer
+#+begin_src emacs-lisp
+(use-package all-the-icons-ibuffer
+  :ensure
+  :init (all-the-icons-ibuffer-mode 1)
+  :config
+  (setq all-the-icons-ibuffer-icon t)
+  (setq all-the-icons-ibuffer-color-icon t)
+  (setq  all-the-icons-ibuffer-human-readable-size t)
+)
+#+end_src
+*** company-mode company-box all-the-iconcs
+#+begin_src emacs-lisp
+(use-package company-box
+   :diminish company-box-mode
+   :hook (company-mode . company-box-mode)
+   :init
+   (setq company-box-icons-alist 'company-box-icons-all-the-icons)
+;;   :config
+;;   (require 'all-the-icons)
+;;   (setf (alist-get 'min-height company-box-frame-parameters) 6)
+;;   (setq company-box-icons-alist 'company-box-icons-all-the-icons)
+   )
+#+end_src
+
+*** Window Numbers
+#+begin_src emacs-lisp
+  (defun custom-modeline-window-number ()
+  (propertize (format " %c" (+ 9311 (window-numbering-get-number)))
+	      'face `(:height ,(/ (* 0.90 powerline/default-height) 100.0))
+	      'display '(raise 0.0)))
+#+end_src
+*** Mode Icon
+#+begin_src emacs-lisp
+  (defun custom-modeline-mode-icon ()
+  (format " %s"
+    (propertize icon
+		'help-echo (format "Major-mode: `%s`" major-mode)
+		'face `(:height 1.2 :family ,(all-the-icons-icon-family-for-buffer)))))
+#+end_src
+*** region marking
+#+begin_src emacs-lisp
+  (defun custom-modeline-region-info ()
+  (when mark-active
+    (let ((words (count-lines (region-beginning) (region-end)))
+	  (chars (count-words (region-end) (region-beginning))))
+      (concat
+       (propertize (format "   %s" (all-the-icons-octicon "pencil") words chars)
+		   'face `(:family ,(all-the-icons-octicon-family))
+		   'display '(raise -0.0))
+       (propertize (format " (%s, %s)" words chars)
+		   'face `(:height 0.9))))))
+#+end_src
+*** version control icon
+#+begin_src emacs-lisp
+(defun -custom-modeline-github-vc ()
+  (let ((branch (mapconcat 'concat (cdr (split-string vc-mode "[:-]")) "-")))
+    (concat
+     (propertize (format " %s" (all-the-icons-alltheicon "git")) 'face `(:height 1.2) 'display '(raise -0.1))
+     " · "
+     (propertize (format "%s" (all-the-icons-octicon "git-branch"))
+		 'face `(:height 1.3 :family ,(all-the-icons-octicon-family))
+		 'display '(raise -0.1))
+     (propertize (format " %s" branch) 'face `(:height 0.9)))))
+(defun -custom-modeline-svn-vc ()
+  (let ((revision (cadr (split-string vc-mode "-"))))
+    (concat
+     (propertize (format " %s" (all-the-icons-faicon "cloud")) 'face `(:height 1.2) 'display '(raise -0.1))
+     (propertize (format " · %s" revision) 'face `(:height 0.9)))))
+(defun custom-modeline-icon-vc ()
+  (when vc-mode
+    (cond
+      ((string-match "Git[:-]" vc-mode) (-custom-modeline-github-vc))
+      ((string-match "SVN-" vc-mode) (-custom-modeline-svn-vc))
+      (t (format "%s" vc-mode)))))
+#+end_src
+*** helm-icons
+#+begin_src emacs-lisp
+(use-package helm-icons
+  :init (helm-icons-enable)
+  :config (setq helm-icons-provider 'all-the-icons))
+#+end_src
+
+** Arabic and Persian fonts
+# #+begin_src emacs-lisp
+# (set-fontset-font t 'arabic "Kawkab Mono")
+# #+end_src
+** cursor blinking, no please
+#+begin_src emacs-lisp
+  (default-value 'blink-cursor-mode)
+#+end_src
+** font
+#+begin_src emacs-lisp
+  (set-frame-font "Iosevka SS15 10" nil t)
+#+end_src
+** ligature
+#+begin_src emacs-lisp
+(use-package ligature
+  :load-path "path-to-ligature-repo"
+  :config
+  ;; Enable the "www" ligature in every possible major mode
+  (ligature-set-ligatures 't '("www"))
+  ;; Enable traditional ligature support in eww-mode, if the
+  ;; `variable-pitch' face supports it
+  (ligature-set-ligatures 'eww-mode '("ff" "fi" "ffi"))
+  ;; Enable all Cascadia Code ligatures in programming modes
+  (ligature-set-ligatures 'prog-mode '("|||>" "<|||" "<==>" "<!--" "####" "~~>" "***" "||=" "||>"
+				       ":::" "::=" "=:=" "===" "==>" "=!=" "=>>" "=<<" "=/=" "!=="
+				       "!!." ">=>" ">>=" ">>>" ">>-" ">->" "->>" "-->" "---" "-<<"
+				       "<~~" "<~>" "<*>" "<||" "<|>" "<$>" "<==" "<=>" "<=<" "<->"
+				       "<--" "<-<" "<<=" "<<-" "<<<" "<+>" "</>" "###" "#_(" "..<"
+				       "..." "+++" "/==" "///" "_|_" "www" "&&" "^=" "~~" "~@" "~="
+				       "~>" "~-" "**" "*>" "*/" "||" "|}" "|]" "|=" "|>" "|-" "{|"
+				       "[|" "]#" "::" ":=" ":>" ":<" "$>" "==" "=>" "!=" "!!" ">:"
+				       ">=" ">>" ">-" "-~" "-|" "->" "--" "-<" "<~" "<*" "<|" "<:"
+				       "<$" "<=" "<>" "<-" "<<" "<+" "</" "#{" "#[" "#:" "#=" "#!"
+				       "##" "#(" "#?" "#_" "%%" ".=" ".-" ".." ".?" "+>" "++" "?:"
+				       "?=" "?." "??" ";;" "/*" "/=" "/>" "//" "__" "~~" "(*" "*)"
+				       "\\\\" "://"))
+  ;; Enables ligature checks globally in all buffers. You can also do it
+  ;; per mode with `ligature-mode'.
+  (global-ligature-mode t))
+#+end_src
+** line number
+#+begin_src emacs-lisp
+(add-hook 'prog-mode-hook 'linum-mode)
+#+end_src
+** show a message at startup
+#+begin_src emacs-lisp
+(setq inhibit-startup-message t)
+#+end_src
+** theme
+#+begin_src emacs-lisp
+(use-package flatfluc-theme
+:ensure t
+:config
+(load-theme 'flatfluc t)
+)
+#+end_src
+** toolbar and menu bar
+#+begin_src emacs-lisp
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+#+end_src
+** y-n is better than yes-no
+#+begin_src emacs-lisp
+(defalias 'yes-or-no-p 'y-or-n-p)
+#+end_src
+
+** ZWNJ*: add some highlighter
+# *: نیم‌فاصله
+
+#+begin_src emacs-lisp
+(defface zwnj-face
+  '((t (:background "#D87C83")))
+  "Used in text-mode and friends for exactly one space after a period.")
+
+(mapc (lambda (mode)
+	(font-lock-add-keywords
+	 mode
+	 '(("‌" 0 'zwnj-face)
+	   )))
+      '(text-mode latex-mode html-mode emacs-lisp-mode org-mode
+	texinfo-mode))
+#+end_src
+
+* wakatime
+# #+begin_src emacs-lisp
+# ;; (use-package wakatime-mode
+# ;;   :ensure t
+# ;;   :if (executable-find "wakatime-cli")
+# ;;   :init
+# ;;   (setq wakatime-cli-path (executable-find "wakatime-cli"))
+# ;;   :config
+# ;;   (global-wakatime-mode))
+# #+end_src
+
+* which-key
+#+begin_src emacs-lisp
+(use-package which-key
+      :config
+      (which-key-mode))
+#+end_src
+
+* whitespaces
+#+begin_src emacs-lisp
+(use-package whitespace-mode
+:custom
+(whitespace-style '(tab-mark newline-mark))
+(whitespace-display-mappings '((tab-mark     ?\t    [?» ?\t] [?\\ ?\t])))
+:hook
+(after-init . whitespace-mode))
+#+end_src
+
+* writing
+#+begin_src emacs-lisp
+(use-package writeroom-mode
+:ensure t)
+#+end_src
+
+#+begin_src emacs-lisp
+(yas-global-mode 1)
+#+end_src
+
+* yasnippet
+#+begin_src emacs-lisp
+  (use-package yasnippet
+  :ensure t)
+  ;; :hook ((prog-mode . yas-minor-mode)
+  ;;    (conf-mode . yas-minor-mode)
+  ;;    (text-mode . yas-minor-mode)
+  ;;    (snippet-mode . yas-minor-mode)))
+
+  (use-package yasnippet-snippets
+  :ensure t
+  :after (yasnippet))
+#+end_src
+

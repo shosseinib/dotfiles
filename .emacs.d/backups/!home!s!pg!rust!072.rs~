@@ -1,0 +1,6 @@
+fn main() {
+    let chars = "hi crabs".chars().collect::<Veco<char>>();
+    println!("{}", chars.len());
+
+    println!("{}", chars[3] as u32);
+}

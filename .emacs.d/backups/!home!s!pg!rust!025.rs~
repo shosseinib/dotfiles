@@ -1,0 +1,17 @@
+fn example() -> i32 {
+    let x = 42;
+    let c  = if x < 42 {-1} else {1};
+    println!("from if: {}",c );
+
+    let food = "hamburger";
+    let result = match food{
+	_ => "is not hotdog";
+    };
+    println!("identifyi food: {}", result );
+    let v = {
+	let a = 1;
+	let b = 2;
+	a + b
+    };
+    println!("from block: {}",v );
+}

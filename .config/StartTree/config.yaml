@@ -1,0 +1,53 @@
+font_size: 12
+theme: water-fire
+tree_1:
+  social:
+    tweetdeck: "https://tweetdeck.twitter.com"
+    twitter: "https://twitter.com/"
+    reddit: "https://www.reddit.com/"
+    instagram: "https://www.instagram.com/"
+  communicate:
+    telegram: "https://web.telegram.org/"
+    whatsapp: "https://web.whatsapp.com/"
+    gmail: "https://mail.google.com/"
+    outlook: "https://outlook.live.com/owa/"
+    ut: "https://mail.ut.ac.ir"
+
+tree_2:
+  translate: 
+    google: "https://translate.google.com/"
+    bing: "https://www.bing.com/translator"
+    yandex: "https://translate.yandex.com/"
+  article:
+    arxiv: "https://arxiv.org/"
+    biorxiv: "biorxiv.org"
+    libgen: "http://gen.lib.rus.ec"
+    sci-hub: "https://sci-hub.se/"
+  study:
+    inoreader: "https://www.inoreader.com/"
+    goodreads: "https://www.goodreads.com/"
+    ganjoor: "https://ganjoor.net"
+    poetryfoundation: "https://www.poetryfoundation.org/"
+    r/poetry: "https://www.reddit.com/r/Poetry"
+
+tree_3:
+  video:
+    30nama: "https://30nama.com/"
+    yekanime: "https://yekanime2.xyz"
+    1337x: "https://1337x.to/"
+    youtube: "https://www.youtube.com/"
+  music:
+    bandcamp: "https://bandcamp.com/shosseinib/feed"
+    last.fm: "https://www.last.fm/user/toospool"
+    spotify: "https://open.spotify.com/"
+    yt music: "https://music.youtube.com"
+    radiojavan: "https://radiojavan.com"
+
+tree_4:
+  other:
+    omg ubuntu: "https://www.omgubuntu.co.uk/"
+    digitalbam: "https://www.digitalbam.ir/"
+    trainbit: "https://trainbit.com/files"
+    time: "http://time.ir"
+    varzesh3: "http://varzesh3.com/"
+    yandex images: "https://yandex.com/images/"

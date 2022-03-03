@@ -1,0 +1,10 @@
+#include <iostream>
+
+void sonFunction{
+  int x{};
+}
+
+int main()
+{
+  return 0;
+}

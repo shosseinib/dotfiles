@@ -1,0 +1,184 @@
+IMAPAccount ut
+# Address to connect to
+Host mail.ut.ac.ir
+User shosseinib
+Pass eybaba01101E
+# To store the password in an encrypted file use PassCmd instead of Pass
+# PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.mailpass.gpg"
+#
+# Use SSL
+SSLType IMAPS
+# The following line should work. If you get certificate errors, uncomment the two following lines and read the "Troubleshooting" section.
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+#CertificateFile ~/.cert/imap.gmail.com.pem
+#CertificateFile ~/.cert/Equifax_Secure_CA.pem
+
+IMAPStore ut-remote
+Account ut
+
+MaildirStore ut-local
+SubFolders Verbatim
+# The trailing "/" is important
+Path ~/.mail/ut/
+Inbox ~/.mail/ut/Inbox
+
+Channel ut
+Far :ut-remote:
+Near :ut-local:
+# Exclude everything under the internal [Gmail] folder, except the interesting folders
+#Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail"
+# Or include everything
+#Patterns *
+# Automatically create missing mailboxes, both locally and on the server
+Create Both
+# Sync the movement of messages between folders and deletions, add after making sure the sync works
+Expunge Both
+# Save the synchronization state files in the relevant directory
+SyncState *
+
+
+IMAPAccount shahed
+Host imap.gmail.com
+User shahedhosseini92@gmail.com
+Pass ijgsameknhlwzfbh
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore shahed-remote
+Account shahed
+
+MaildirStore shahed-local
+SubFolders Verbatim
+Path ~/.mail/shahed/
+Inbox ~/.mail/shahed/Inbox
+
+Channel shahed-inbox
+Far :shahed-remote:"INBOX"
+Near :shahed-local:"INBOX"
+CopyArrivalDate yes
+Create Both
+Expunge Both
+SyncState *
+
+Channel shahed-trash
+Far :shahed-remote:"[Gmail]/Trash"
+Near :shahed-local:"Trash"
+CopyArrivalDate yes
+Create Both
+Expunge Both
+SyncState *
+
+Channel shahed-spam
+Far :shahed-remote:"[Gmail]/Spam"
+Near :shahed-local:"Spam"
+CopyArrivalDate yes
+Create Both
+Expunge Both
+SyncState *
+
+Channel shahed-all
+Far :shahed-remote:"[Gmail]/All Mail"
+Near :shahed-local:"Archive"
+CopyArrivalDate yes
+Create Both
+Expunge Both
+SyncState *
+
+Channel shahed-drafts
+Far :shahed-remote:"[Gmail]/Drafts"
+Near :shahed-local:"Drafts"
+CopyArrivalDate yes
+Create Both
+Expunge Both
+SyncState *
+
+Group shahed
+Channel shahed-inbox
+Channel shahed-trash
+Channel shahed-all
+Channel shahed-spam
+Channel shahed-drafts
+
+IMAPAccount sajjadhusseini92
+Host imap.gmail.com
+User username@sajjadhusseini92.com
+Pass uwmacxgifusohnhe
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore sajjadhusseini92-remote
+Account sajjadhusseini92
+
+MaildirStore sajjadhusseini92-local
+SubFolders Verbatim
+Path ~/.mail/sajjadhusseini92/
+Inbox ~/.mail/sajjadhusseini92/Inbox
+
+Channel sajjadhusseini92-inbox
+Far :sajjadhusseini92-remote:"INBOX"
+Near :sajjadhusseini92-local:"INBOX"
+CopyArrivalDate yes
+Create Both
+Expunge Both
+SyncState *
+
+Channel sajjadhusseini92-trash
+Far :sajjadhusseini92-remote:"[Gmail]/Trash"
+Near :sajjadhusseini92-local:"Trash"
+CopyArrivalDate yes
+Create Both
+Expunge Both
+SyncState *
+
+Channel sajjadhusseini92-spam
+Far :sajjadhusseini92-remote:"[Gmail]/Spam"
+Near :sajjadhusseini92-local:"Spam"
+CopyArrivalDate yes
+Create Both
+Expunge Both
+SyncState *
+
+Channel sajjadhusseini92-all
+Far :sajjadhusseini92-remote:"[Gmail]/All Mail"
+Near :sajjadhusseini92-local:"Archive"
+CopyArrivalDate yes
+Create Both
+Expunge Both
+SyncState *
+
+Channel sajjadhusseini92-drafts
+Far :sajjadhusseini92-remote:"[Gmail]/Drafts"
+Near :sajjadhusseini92-local:"Drafts"
+CopyArrivalDate yes
+Create Both
+Expunge Both
+SyncState *
+
+Group sajjadhusseini92
+Channel sajjadhusseini92-inbox
+Channel sajjadhusseini92-trash
+Channel sajjadhusseini92-all
+Channel sajjadhusseini92-spam
+Channel sajjadhusseini92-drafts
+
+IMAPAccount outlook
+Host outlook.live.com
+User sajjadhosseini@outlook.com
+Pass Sooskesiahebangal
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore outlook-remote
+Account outlook
+
+MaildirStore outlook-local
+SubFolders Verbatim
+Path ~/.mail/outlook/
+Inbox ~/.mail/outlook/Inbox
+
+Channel outlook
+Far :outlook-remote:
+Near :outlook-local:
+Create Both
+Expunge Both
+SyncState *

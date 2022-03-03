@@ -1,0 +1,4 @@
+fn main() {
+    let a: &'static str = "hi crabs";
+    println!("{} {}", a, a.len());
+}

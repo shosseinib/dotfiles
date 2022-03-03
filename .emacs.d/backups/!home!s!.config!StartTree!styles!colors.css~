@@ -1,0 +1,98 @@
+:root {
+    /* Special */
+    --background: #A9D5D4;
+    --foreground: #262626;
+    --cursor: #262626;
+
+    /* Colors */
+    --color0: #000000;
+    --color1: #;
+    --color2: #558fa9;
+    --color3: #9790a6;
+    --color4: #b17379;
+    --color5: #b45255;
+    --color6: #bf3032;
+    --color7: #c0c6c7;
+    --color8: #425458;
+    --color9: #6E5773;
+    --color10: #558fa9;
+    --color11: #9790a6;
+    --color12: #b17379;
+    --color13: #b45255;
+    --color14: #bf3032;
+    --color15: #c0c6c7;
+
+    --fui-turquoise: #27A097
+    --fui-emerald: #1193A4
+    --fui-river: #1193A4
+    --fui-amethyst: #6E5773
+    --fui-deep-asphalt: #6E5773
+    --fui-asphalt: #6E5773
+    --fui-sunflower: ##FC9C76
+    --fui-carrot: #FC9C76
+    --fui-alizarin: #D87C83
+    --fui-clouds: #b9d5d4
+    --fui-concrete: #34495e
+
+
+    --fui-dark-turquoise: #27A097
+    --fui-dark-emerald: #1193A4
+    --fui-dark-river: #1193A4
+    --fui-dark-amethyst: #6E5773
+    --fui-dark-asphalt: #6E5773
+    --fui-dark-sunflower: #FC9C76
+    --fui-dark-carrot: #FC9C76
+    --fui-dark-alizarin: #D87C83
+    --fui-dark-clouds: #6E5773
+    --fui-deep-clouds: #b9d5d4
+		       --fui-dark-concrete: #34495e
+
+
+					    #27A097")
+(defconst fui-emerald "#1193A4")
+(defconst fui-river "#1193A4")
+(defconst fui-amethyst "#6E5773")
+(defconst fui-deep-asphalt "#4E4351")
+(defconst fui-asphalt "#4E4351")
+(defconst fui-sunflower "#FC9C76")
+(defconst fui-carrot "#FC9C76")
+(defconst fui-alizarin "#D87C83")
+(defconst fui-clouds "#b9d5d4")
+(defconst fui-concrete "#4E4351")
+
+;; Dark colors
+(defconst fui-dark-turquoise "#27A097")
+(defconst fui-dark-emerald "#1193A4")
+(defconst fui-dark-river "#1193A4")
+(defconst fui-dark-amethyst "#6E5773")
+(defconst fui-dark-asphalt "#4E4351")
+(defconst fui-dark-sunflower "#FC9C76")
+(defconst fui-dark-carrot "#FC9C76")
+(defconst fui-dark-alizarin "#D87C83")
+(defconst fui-dark-clouds "#8CA7A6")
+(defconst fui-deep-clouds "#627C7B")
+(defconst fui-dark-concrete "#4E4351")
+
+					     #34495e")
+    ("github-comment"                . "#6e5773")
+    ("github-constant"               . "#1193A4")
+    ("github-diff-added"             . "#6E5773")
+    ("github-diff-added-highlight"   . "#1193A4")
+    ("github-diff-changed"           . "#FC9C76")
+    ("github-diff-changed-highlight" . "#D87C83")
+    ("github-diff-removed"           . "#FC9C76")
+    ("github-diff-removed-highlight" . "#D87C83")
+    ("github-function"               . "#6E5773")
+    ("github-header-bg"              . "#D87C83")
+    ("github-header-fg"              . "#b9d5d4")
+    ("github-highlight"              . "#FC9C76")
+    ("github-header-bg"              . "#34495e")
+    ("github-header-fg"              . "#1193A4")
+    ("github-html-tag"               . "#27A097")
+    ("github-keyword"                . "#D87C83")
+    ("github-selection"              . "#1193A4")
+    ("github-string"                 . "#34495e")
+    ("github-text"                   . "#6e5773")
+    "github-white"                  . "#b9d5d4"))
+    
+}

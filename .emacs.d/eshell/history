@@ -1,0 +1,16 @@
+pwd 
+exit
+sudo mount /dev/sdb3 /mnt/files/
+cd /mnt/files/
+sudo mount /dev/sdb1 /mnt/windows/
+cd /mnt/windows/
+ls 
+bomi The.Meyerowitz.Stories.2017.720p.BluRay.x264.YTS.mymoviefilm.mkv 
+cd /mnt/files/
+ls 
+bomi Sayonara\ no\ Asa\ ni\ Yakusoku\ no\ Hana\ wo\ Kazarou\ \[1080p\]\ \[BD\]\ \[Eng\ Sub\]\ \[x265\]\ \[AnimDL.ir.mkv 
+cd movie/
+ls 
+bomi October.2018.720p.BRrip.MkvCage.FardaDL.mkv 
+bomi Beginners.2010.1080p.10bit.BluRay.x265.HEVC.AC3.6CH.d3g.FardaDL.mkv 
+exit

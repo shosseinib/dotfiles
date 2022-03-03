@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: doi
+# key: doi
+# --
+[[https://doi.org/$1][$2]]

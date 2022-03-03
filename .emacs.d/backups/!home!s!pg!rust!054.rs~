@@ -1,0 +1,13 @@
+fn do_sth_that_might_fail(i: i32) -> Result<f32, String> {
+    if i == 42 {
+        Ok(13.0)
+    } else {
+        Err(String::from("this isn't the right number"))
+    }
+}
+
+fn main() -> Result<(), String> {
+    let v = do_sth_that_might_fail(42);
+    println!("found {}", v);
+    Ok(())
+}

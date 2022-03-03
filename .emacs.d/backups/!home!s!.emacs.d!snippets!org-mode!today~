@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: today
+# key: td
+# --
+`(format-time-string "%a %d-%m-%Y")

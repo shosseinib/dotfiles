@@ -1,0 +1,48 @@
+:root {
+    /* Special */
+    --background: #A9D5D4;
+    --foreground: #262626;
+    --cursor: #262626;
+
+    /* Colors */
+    --color0: #000000;
+    --color1: #;
+    --color2: #558fa9;
+    --color3: #9790a6;
+    --color4: #b17379;
+    --color5: #b45255;
+    --color6: #bf3032;
+    --color7: #c0c6c7;
+    --color8: #425458;
+    --color9: #6E5773;
+    --color10: #558fa9;
+    --color11: #9790a6;
+    --color12: #b17379;
+    --color13: #b45255;
+    --color14: #bf3032;
+    --color15: #c0c6c7;
+
+    --fui-turquoise: #27A097
+    --fui-emerald: #1193A4
+    --fui-river: #1193A4
+    --fui-amethyst: #6E5773
+    --fui-deep-asphalt: #6E5773
+    --fui-asphalt: #6E5773
+    --fui-sunflower: ##FC9C76
+    --fui-carrot: #FC9C76
+    --fui-alizarin: #D87C83
+    --fui-clouds: #b9d5d4
+    --fui-concrete: #34495e
+
+    --fui-dark-turquoise: #27A097
+    --fui-dark-emerald: #1193A4
+    --fui-dark-river: #1193A4
+    --fui-dark-amethyst: #6E5773
+    --fui-dark-asphalt: #6E5773
+    --fui-dark-sunflower: #FC9C76
+    --fui-dark-carrot: #FC9C76
+    --fui-dark-alizarin: #D87C83
+    --fui-dark-clouds: #6E5773
+    --fui-deep-clouds: #b9d5d4
+    --fui-dark-concrete: #34495e
+}

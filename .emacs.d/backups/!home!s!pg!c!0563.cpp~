@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+#include <algorithm>
+
+bool approximatelyEqual(double a, double b, double absEpsilon, double relEpsilon){
+  double diff {std::abs(a-b)};
+  if (diff <= absEpsilon){
+    return true;
+  }
+  return (diff <= (std::max(std::abs(a), std::abs(b)))* relEpsilon);
+}
+
+int main()
+{
+  	// a is really close to 1.0, but has rounding errors, so it's slightly smaller than 1.0
+	double a{ 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 };
+
+	// First, let's compare a (almost 1.0) to 1.0.
+	std::cout << approximatelyEqual(a, 1.0, 1e-8) << '\n';
+
+	// Second, let's compare a-1.0 (almost 0.0) to 0.0
+	std::cout << approximatelyEqual(a-1.0, 0.0, 1e-8) << '\n';
+	
+  return 0;
+}

@@ -1,0 +1,9 @@
+fn main() {
+    let x = 42;
+
+    match x {
+        0 => {
+            println!("found zero",);
+        }
+    }
+}

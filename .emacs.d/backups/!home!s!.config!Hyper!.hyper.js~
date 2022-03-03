@@ -1,0 +1,10 @@
+module.exports = {
+    config: {
+	fontSize: 5,
+	fontFamily: '"Fira Code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+	// rest of the config
+    }
+    // rest of the file
+}'""""""'
+    }
+}

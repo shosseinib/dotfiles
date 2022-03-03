@@ -1,0 +1,27 @@
+#include <iostream>
+
+int getInt(){
+  static bool s_isFirstCall {true};
+
+  if (s_isFirstCall) {
+    std::cout << "enter an int:" << "\n";
+    s_isFirstCall = False;
+  }
+  else {
+    std::cout << "enter another:" << "\n";
+  }
+
+  int i {};
+  std::cin >> i;
+  retrun i;
+}
+
+int main()
+{
+  int a {getInt()};
+  int b {getInt()};
+
+  std::cout << a << " + " << b << " = " << (a+b) << "\n";
+
+  return 0;
+}

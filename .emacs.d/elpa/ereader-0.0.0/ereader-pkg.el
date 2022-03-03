@@ -1,0 +1,2 @@
+;;; Generated package description from ereader.el  -*- no-byte-compile: t -*-
+(define-package "ereader" "0.0.0" "Major mode for reading ebooks with org-mode integration" '((emacs "24.4") (dash "2.12.1") (s "1.10.0") (xml+ "0.0.0")) :authors '(("Ben Dean" . "bendean837@gmail.com")) :maintainer '("Ben Dean" . "bendean837@gmail.com") :keywords '("epub" "ebook") :url "https://github.com/bddean/emacs-ereader")

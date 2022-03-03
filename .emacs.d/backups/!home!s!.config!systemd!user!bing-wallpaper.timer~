@@ -1,0 +1,10 @@
+[Unit]
+Description=Bing Wallpaper of the Day as your Linux Desktops wallpaper
+
+[Timer]
+OnCalendar=*-*-* *:00:00
+OnStartupSec=3min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,12 @@
+fn add(x: i32, y: i32) {
+    return x + y;
+}
+
+fn substract(x: i32, y: i32) {
+    x - y
+}
+
+fn main() {
+    println!("42 + 13 = {}", add(42, 13));
+    println!("42-13 = {}", substract(42, 13));
+}

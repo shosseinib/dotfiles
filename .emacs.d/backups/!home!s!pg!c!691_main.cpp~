@@ -1,0 +1,13 @@
+#include "691_constans"
+#include <iostream>
+
+int main()
+{
+  std::cout << "enter radius:" << "\n";
+  int radius{};
+  std::cin >> radius;
+
+  std::cout << "the circumference is: " << 2.0 * radius * constants::pi << "\n";
+
+  return 0;
+}

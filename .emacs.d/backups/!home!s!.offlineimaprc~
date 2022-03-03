@@ -1,0 +1,73 @@
+[general]
+accounts = shahed, sajjadhusseini92, outlook
+maxsyncaccounts = 4
+
+[Account shahed]
+localrepository = shahed-local
+remoterepository = shahed-remote
+autorefresh = 0.5
+quick = 10
+postsynchook = mu init --maildir=~/Maildir
+# status_backend = sqlite
+
+[Repository shahed-local]
+type = Maildir
+localfolders = ~/Maildir/shahed
+
+[Repository shahed-remote]
+type = IMAP
+remotehost = imap.gmail.com
+remoteuser = shahedhosseini92
+remotepass = ijgsameknhlwzfbh
+folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail', '[Gmail]/Important']
+# sslcacertfile = /usr/local/etc/openssl/cert.pem  # This will only work for macOS
+maxconnections = 1
+# Try one of the following for Ubuntu or Arch:
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+# sslcacertfile = OS-DEFAULT
+# Necessary to work around https://github.com/OfflineIMAP/offlineimap/issues/573 (versions 7.0.12, 7.2.1)
+ssl_version = tls1_2
+# These are effectively the same as the above
+#[Account outlook]
+#[Repository LocalExchange]
+#[Repository RemoteExchange]
+# LocalWords:  maxsyncaccounts
+
+[Account sajjadhusseini92]
+localrepository = sajjadhusseini92-local
+remoterepository = sajjadhusseini92-remote
+autorefresh = 0.5
+quick = 10
+postsynchook = mu init --maildir=~/Maildir
+[Repository sajjadhusseini92-local]
+type = Maildir
+localfolders = ~/Maildir/sajjadhusseini92
+[Repository sajjadhusseini92-remote]
+type = IMAP
+remotehost = imap.gmail.com
+remoteuser = sajjadhusseini92
+remotepass = uwmacxgifusohnhe
+folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail', '[Gmail]/Important']
+max connections = 1
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl_version = tls1_2
+
+[Account outlook]
+localrepository = outlook-local
+remoterepository = outlook-remote
+autorefresh = 0.5
+quick = 10
+postsynchook = mu init --maildir=~/Maildir
+[Repository outlook-local]
+type = Maildir
+localfolders = ~/Maildir/outlook
+[Repository outlook-remote]
+type = IMAP
+auth_mechanisms = PLAIN
+remotehost = outlook.live.com
+remoteuser = sajjadhosseini@outlook.com
+remotepass = Sooskesiahebangal
+readonly = true
+maxconnections = 1
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl_version = tls1_2

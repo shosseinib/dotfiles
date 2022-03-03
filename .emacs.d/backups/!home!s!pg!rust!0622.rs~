@@ -1,0 +1,14 @@
+static PI: f64 = 3.14159;
+
+fn main() {
+    static mut SECRET: &'static str = "swordfish";
+
+    let msg: &'static str = "hello world";
+    let p: &'static f64 = &PI;
+    println!("} {}", msg, p);
+
+    unsafe {
+        SECRET = "abradacabra";
+        println!("{}", SECRET);
+    }
+}

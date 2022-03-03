@@ -1,0 +1,61 @@
+#+TITLE: my literate emacs config dotfile
+#+AUTHOR: shosseinib
+#+SETUPFILE: ~/org/setupfiles/comfy_inline.theme
+#+DATE: Thu 03-03-2022
+
+* clangd
+# #+begin_src emacs-lisp
+#   ;;(require 'eglot)
+#   ;;(add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+#   ;;(add-hook 'c-mode-hook 'eglot-ensure)
+#   ;;(add-hook 'c++-mode-hook 'eglot-ensure)
+#   ;; (add-hook 'c-mode-hook 'ls)
+#   ;; (add-hook 'c++-mode-hook 'lsp)
+#   (setq gc-cons-threshold (* 100 1024 1024)
+# 	read-process-output-max (* 1024 1024)
+# 	treemacs-space-between-root-nodes nil
+# 	company-idle-delay 0.0
+# 	company-minimum-prefix-length 1
+# 	company-show-numbers t)
+#   ;;       lsp-idle-delay 0.1)  ;; clangd is fast
+#   ;; ;; lsp
+#   ;; (use-package lsp-mode
+#   ;;   :init
+#   ;;   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+#   ;;   (setq lsp-keymap-prefix "C-c l")
+#   ;;   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+#   ;;          (prog-mode . lsp)
+#   ;;          ;; if you want which-key integration
+#   ;;          (lsp-mode . lsp-enable-which-key-integration))
+#   ;;   :commands lsp
+#   ;;   :ensure t)
+#   ;; ;; optionally
+#   ;; (use-package lsp-ui :commands lsp-ui-mode :ensure t)
+#   ;; ;; if you are helm user
+#   ;; (use-package helm-lsp :commands helm-lsp-workspace-symbol)
+#   ;; ;; if you are ivy user
+#   ;; (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+#   ;; (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+#   ;; ;; ccls
+#   ;; (use-package ccls
+#   ;;   :ensure t
+#   ;;   :config
+#   ;;   (setq ccls-executable "ccls")
+#   ;;   (setq lsp-prefer-flymake nil)
+#   ;;   (setq-default flycheck-disabled-checkers '(c/c++-clang c/c++-cppcheck c/c++-gcc))
+#   ;;   :hook ((c-mode c++-mode objc-mode) .
+#   ;;          (lambda () (require 'ccls) (lsp))))
+# #+end_src
+
+* clipbroad
+#+begin_src emacs-lisp
+(use-package pbcopy
+:ensure t)
+#+end_src
+
+* company
+#+begin_src emacs-lisp
+  (add-hook 'after-init-hook 'global-company-mode)
+  (add-hook 'c++-mode-hook 'company-c-headers)
+#+end_src  
+

@@ -1,0 +1,8 @@
+const pI: f32 = 3.14149;
+
+fn main() {
+    println!(
+        "to make an apple {} from scratch, you must first create a universe",
+        PI
+    );
+}
