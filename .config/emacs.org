@@ -192,8 +192,7 @@
 (require 'mu4e)
 (setq mu4e-user-mail-address-list '("@gmail.com"
 			      "@gmail.com"
-			      "sajjadhosseini@.com"
-			      "@ut.ac.ir"))
+))
 (setq mu4e-contexts
 `( ,(make-mu4e-context
 :name ""
@@ -442,8 +441,6 @@ mm-discouraged-alternatives '("text/html"))
 * persian key binds
 #+begin_src emacs-lisp
   (loop
-  ; for from across "йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖ\ЭЯЧСМИТЬБЮ№"
-  ; for to   across "qwertyuiop[]asdfghjkl;'zxcvbnm,.QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>#"
   for from across "ضصثقفغعهخحجچشسیبلاتنمکگظطزرذدپو./۱۲۳۴۵۶۷۸۹۰-="
   for to   across "qwertyuiop[]asdfghjkl;'zxcvbnm,./1234567890-="
   do
@@ -652,6 +649,7 @@ mm-discouraged-alternatives '("text/html"))
 (setq inhibit-startup-message t)
 #+end_src
 ** theme
+my emacs theme is a color and variable modified version of the flatfluc-theme
 #+begin_src emacs-lisp
 (use-package flatfluc-theme
 :ensure t
