@@ -21,7 +21,8 @@ echo $unsplash$query "-> "$title"_"$size."jpeg"
 mkdir -p $unsplashdir
 
 # Saving Image to collection.
-curl --compressed -Lsx socks5h://127.0.0.1:4070 -o $unsplashdir$title"_"$size.jpeg $unsplash$query
+# curl --compressed -Lsx socks5h://127.0.0.1:4070 -o $unsplashdir$title"_"$size.jpeg $unsplash$query
+curl --compressed -o $unsplashdir$title"_"$size.jpeg $unsplash$query
 
 #set wallpaper
 feh --bg-scale $unsplashdir$title"_"$size.jpeg
