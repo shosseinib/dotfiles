@@ -385,16 +385,13 @@ mm-discouraged-alternatives '("text/html"))
 (setq visual-fill-column-center-text t)
 (add-hook 'nov-mode-hook 'visual-line-mode)
 (add-hook 'nov-mode-hook 'visual-fill-column-mode)
-#+end_src
-
-* novel mode 📗
-#+begin_src emacs-lisp
 (add-hook 'novel-mode-post-start-hook
 	  (lambda ()
 	    (set-face-font 'default "ETbb")))
 (add-hook 'novel-mode-post-stop-hook
 	  (lambda ()
 	    (set-face-font 'default "Iosevka SS15 10")))
+
 #+end_src
 * org-mode, holy org mode 🔱
 ** bullets in org mode
