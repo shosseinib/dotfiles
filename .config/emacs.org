@@ -713,12 +713,11 @@ aka نیم‌فاصله
 (use-package writeroom-mode
 :ensure t)
 #+end_src
-
+* yasnippet 🤓
 #+begin_src emacs-lisp
 (yas-global-mode 1)
 #+end_src
 
-* yasnippet 🤓
 #+begin_src emacs-lisp
   (use-package yasnippet
   :ensure t)
@@ -726,7 +725,8 @@ aka نیم‌فاصله
   ;;    (conf-mode . yas-minor-mode)
   ;;    (text-mode . yas-minor-mode)
   ;;    (snippet-mode . yas-minor-mode)))
-
+#+end_src
+#+begin_src emacs-lisp
   (use-package yasnippet-snippets
   :ensure t
   :after (yasnippet))
