@@ -54,7 +54,7 @@
 :ensure t)
 #+end_src
 
-* company 🤖n
+* company 🤖
 #+begin_src emacs-lisp
   (add-hook 'after-init-hook 'global-company-mode)
   (add-hook 'c++-mode-hook 'company-c-headers)
