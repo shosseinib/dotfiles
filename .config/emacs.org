@@ -669,7 +669,7 @@ aka نیم‌فاصله
 #+begin_src emacs-lisp
 (defface zwnj-face
   '((t (:background "#D87C83")))
-  "Used in text-mode and friends for exactly one space after a period.")
+  "add highlight at a ZWNJ character.")
 
 (mapc (lambda (mode)
 	(font-lock-add-keywords
