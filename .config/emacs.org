@@ -4,6 +4,11 @@
 #+TOC:true
 #+DATE: Thu 03-03-2022
 
+* buffers ⚗️
+#+begin_src emacs-lisp
+(global-set-key (kbd "C-<tab>") 'next-buffer)
+(global-set-key (kbd "C-<iso-lefttab>") 'previous-buffer)
+#+end_src
 * clangd
 # #+begin_src emacs-lisp
 #   ;;(require 'eglot)
