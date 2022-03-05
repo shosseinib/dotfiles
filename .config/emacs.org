@@ -6,8 +6,10 @@
 
 * buffers ⚗️
 #+begin_src emacs-lisp
-(global-set-key (kbd "C-<tab>") 'next-buffer)
-(global-set-key (kbd "C-<iso-lefttab>") 'previous-buffer)
+  (global-set-key (kbd "C-<tab>") 'next-buffer)
+  (global-set-key (kbd "C-<iso-lefttab>") 'previous-buffer)
+  (global-set-key (kbd "M-[") 'previous-buffer)
+  (global-set-key (kbd "M-]") 'next-buffer)
 #+end_src
 * clangd
 # #+begin_src emacs-lisp
@@ -372,12 +374,6 @@ mm-discouraged-alternatives '("text/html"))
 :hook
 (after-init . doom-modeline-mode)
 )
-#+end_src
-
-* Navigate through buffers 🧭
-#+begin_src emacs-lisp
-(global-set-key (kbd "M-[") 'previous-buffer)
-(global-set-key (kbd "M-]") 'next-buffer)
 #+end_src
 
 * nov.el 📚
