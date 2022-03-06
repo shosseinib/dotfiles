@@ -275,6 +275,12 @@ mm-discouraged-alternatives '("text/html"))
 (define-key mu4e-headers-mode-map (kbd "v") #'mu4e-views-mu4e-select-view-msg-method)
 #+end_src
 
+** mu4e sound
+#+begin_src emacs-lisp
+(add-hook 'mu4e-index-updated-hook
+  (defun new-mail-notify ()
+    (async-shell-command "bash .config/dunst/dunst_mu4.sh&")))  
+#+end_src
 * flycheck 🔍
 #+begin_src emacs-lisp
 (use-package flycheck
