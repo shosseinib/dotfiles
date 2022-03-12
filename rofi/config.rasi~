@@ -13,10 +13,10 @@ element-text, element-icon {
 }
 
 * {
-  bg: #A9D5D4;
+  bg: #B9D5D4;
   fg: #6E5773;
   selbg: #6E5773;
-  selfg: #A9D5D4;
+  selfg: #B9D5D4;
 
   background-color: @bg;
   text-color: @fg;

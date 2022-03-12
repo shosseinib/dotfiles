@@ -1,7 +1,8 @@
 configuration {
-  icon-theme: "Papirus-Dark";
+  icon-theme: "Papirus";
   show-icons: false;
   modi: "drun,calc,window,windowcd,run,ssh,combi,keys,filebrowser";
+  location: 5;
 }
 
 @theme "/dev/null"
@@ -12,10 +13,10 @@ element-text, element-icon {
 }
 
 * {
-  bg: #1d2021;
-  fg: #ddc7a1;
-  selbg: #282828;
-  selfg: #89b482;
+  bg: #B9D5D4;
+  fg: #6E5773;
+  selbg: #6E5773;
+  selfg: #B9D5D4;
 
   background-color: @bg;
   text-color: @fg;
@@ -24,9 +25,9 @@ element-text, element-icon {
   selected-normal-background: @selbg;
   normal-background: @bg;
   border-color: @selbg;
-  font: "Source Code Pro 8";
-  margin: 3px;
-  padding: 0px;
+  font: "Iosevka SS15 8";
+  margin: 0px;
+  padding: 5px;
   border: 0px;
 }
 
@@ -39,11 +40,13 @@ window {
   orientation: horizontal;
   children: [mainbox];
   padding: 0px;
+
 }
 
 mainbox {
   padding: 10px;
   margin: 0px;
+  margin-left: 0px;
 }
 
 inputbar {
