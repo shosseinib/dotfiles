@@ -5,7 +5,7 @@
 }
 
 :root {
-    --font: "Iosevka SS15";
+    --font: "Roboto Mono";
     /* --background: var(--background) !important; */
     /* --foreground: #fffffe; */
     /* --pink: #e53170; */
